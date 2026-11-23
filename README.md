@@ -1,16 +1,65 @@
-# React + Vite
+Smart Sales Prediction System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+About the Project
 
-Currently, two official plugins are available:
+Smart Sales Prediction is a machine learning-based application that predicts sales based on advertising expenditure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project uses Linear Regression to understand the relationship between advertising investment and sales. Users can enter an advertising budget throu then why you gh a React interface and receive predicted sales.
 
-## React Compiler
+Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Python
+- Machine Learning
+- Linear Regression
+- Pandas
+- Scikit-learn
+- FastAPI
+- React.js
+- JavaScript
+- HTML
+- CSS
 
-## Expanding the ESLint configuration
+Project Workflow
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Machine Learning: Train a Linear Regression model using historical sales data.
+2. Backend: FastAPI loads the trained model and provides a prediction API.
+3. Frontend: React provides a user interface for entering the advertising budget.
+4. Prediction: The backend predicts sales and sends the result to the frontend.
+
+Project Files
+
+- "main.py" – FastAPI backend.
+- "train_model.py" – Machine Learning model training.
+- "sales_data.csv" – Dataset used for training.
+- "sales_model.pkl" – Saved trained model.
+- "App.jsx" – React application.
+- "App.css" – Application styling.
+- "index.css" – Global styling.
+- "main.jsx" – React entry point.
+
+How to Run the Project
+
+1. Train the Machine Learning Model
+
+python train_model.py
+
+2. Start the Backend
+
+uvicorn main:app --reload
+
+3. Start the Frontend
+
+Open another terminal:
+
+npm install
+npm run dev
+
+Open the local URL displayed by Vite in your browser.
+
+Model Used
+
+Linear Regression
+
+Project Objective
+
+To demonstrate how Machine Learning can be integrated with a backend API and a frontend application to make sales predictions based on advertising expenditure.
