@@ -1,0 +1,296 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fc;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7ebf3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #172b58;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: white;
+  background: #3458db;
+  border-radius: 12px;
+}
+
+.nav-label {
+  color: #667085;
+  font-size: 14px;
+}
+
+.main-content {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 55px 10px 35px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 13px;
+  color: #3458db;
+  background: #e8edff;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  margin: 20px 0 12px;
+  font-size: clamp(34px, 5vw, 48px);
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  color: #3458db;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #667085;
+  line-height: 1.7;
+}
+
+.prediction-card {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e6eaf2;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(28, 45, 90, 0.07);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.heading-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: #3458db;
+  background: #e8edff;
+  border-radius: 14px;
+  font-size: 27px;
+}
+
+.card-heading h2 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.card-heading p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 15px;
+  border: 1px solid #d7ddea;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.input-wrapper:focus-within {
+  border-color: #3458db;
+  box-shadow: 0 0 0 3px rgba(52, 88, 219, 0.12);
+}
+
+.input-symbol {
+  color: #667085;
+  font-size: 18px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+form small {
+  display: block;
+  margin-top: 10px;
+  color: #667085;
+  line-height: 1.5;
+}
+
+form button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 15px;
+  color: #ffffff;
+  background: #3458db;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #2444b8;
+}
+
+form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.error-message {
+  margin-top: 18px;
+  padding: 13px;
+  color: #b42318;
+  background: #fef3f2;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.result-card {
+  margin-top: 22px;
+  padding: 22px;
+  text-align: center;
+  background: #eefbf4;
+  border: 1px solid #c9f0d9;
+  border-radius: 12px;
+}
+
+.result-label {
+  color: #267449;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.result-card h3 {
+  margin: 12px 0;
+  color: #17643a;
+  font-size: 36px;
+}
+
+.result-card p {
+  margin: 0;
+  color: #42735a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 35px 0;
+}
+
+.info-card {
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e6eaf2;
+  border-radius: 14px;
+}
+
+.info-icon {
+  font-size: 25px;
+}
+
+.info-card h3 {
+  margin: 15px 0 9px;
+  font-size: 16px;
+}
+
+.info-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 25px 0;
+  color: #7a8498;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 16px;
+  }
+
+  .nav-label {
+    max-width: 130px;
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .prediction-card {
+    padding: 22px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
